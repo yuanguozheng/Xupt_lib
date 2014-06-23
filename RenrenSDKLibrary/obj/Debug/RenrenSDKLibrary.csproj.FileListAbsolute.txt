@@ -1,0 +1,34 @@
+D:\phone7_work\projects\svn\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.dll
+D:\phone7_work\projects\svn\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.pdb
+D:\phone7_work\projects\svn\RenrenSDKLibrary\obj\Debug\ResolveAssemblyReference.cache
+D:\phone7_work\projects\svn\RenrenSDKLibrary\obj\Debug\Controls\BrowserControl.g.i.cs
+D:\phone7_work\projects\svn\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.g.resources
+D:\phone7_work\projects\svn\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.dll
+D:\phone7_work\projects\svn\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.pdb
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.dll
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.pdb
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.xml
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\Controls\BrowserControl.g.i.cs
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\Pages\UploadPhotoPage.g.i.cs
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.g.resources
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.dll
+C:\Users\szs\Desktop\新建文件夹 (2)\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.pdb
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.dll
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\RenrenSDKLibrary.pdb
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.dll
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.pdb
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.Toolkit.xml
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\Bin\Debug\Microsoft.Phone.Controls.xml
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\Pages\UploadPhotoPage.g.i.cs
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.g.resources
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.dll
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\RenrenSDKLibrary.pdb
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\Browser\BrowserControl.g.i.cs
+E:\Projects\WP7 SDK v2.0\RenrenSDKLibrary\obj\Debug\CustomControls\OauthControl.g.i.cs

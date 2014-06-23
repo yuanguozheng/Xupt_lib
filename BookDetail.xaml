@@ -1,0 +1,184 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Xupt_lib.BookDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="Black"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" shell:SystemTray.ForegroundColor="Black" shell:SystemTray.Opacity="0" Loaded="PhoneApplicationPage_Loaded_1">
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity="0.65" BackgroundColor="Black" ForegroundColor="White">
+            <shell:ApplicationBarIconButton x:Name="AddFav" IconUri="/Assets/AppBar/appbar.favs.rest.png" Text="收藏" Click="AddFav_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator x:Name="load" IsIndeterminate="True" Text="数据获取中..." />
+    </shell:SystemTray.ProgressIndicator>
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition  Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/user.png"/>
+        </Grid.Background>
+        <!--枢轴控件-->
+        <controls:Pivot Foreground="Black" Margin="0,91,0,0">
+            <!--枢轴项一-->
+            <controls:PivotItem x:Name="p1" Margin="12,10,12,0">
+                <controls:PivotItem.Header>
+                    <TextBlock Text="基本信息" FontSize="48"/>
+                </controls:PivotItem.Header>
+                <Grid>
+                    <ListBox x:Name="BasicInfo" Foreground="Black" HorizontalAlignment="Center" Background="#4CFFFFFF" Margin="3,0,3,78">
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Grid HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="175" Margin="15,15,0,0">
+                                <Image x:Name="Icon_m" Source="/book.png" />
+                                <ProgressBar IsIndeterminate="True" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Center" x:Name="loadingImg" Width="175" />
+                            </Grid>
+                            <TextBlock Foreground="Black" HorizontalAlignment="Left" TextWrapping="Wrap" Text="书名：" VerticalAlignment="Top" Margin="200,15,0,0" FontSize="24" FontWeight="Bold"/>
+                            <TextBlock Foreground="Black" x:Name="BookName" Text="" TextWrapping="Wrap" Margin="200,52,15,0" FontSize="21.333" Width="235" Height="165" VerticalAlignment="Top" MaxWidth="235" />
+                        </Grid>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" FontSize="24" Margin="10,0,0,0" FontWeight="Bold">
+								<Run Text="图书馆索书号"/>
+								<Run Text=""/>
+								<Run Text="："/>
+                            </TextBlock>
+                            <TextBlock Foreground="Black" x:Name="BookId" TextWrapping="Wrap" FontSize="21.333" Text="" Margin="40,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" Text="作者：" FontSize="24" Margin="10,0,0,0" FontWeight="Bold"></TextBlock>
+                            <TextBlock Foreground="Black" x:Name="BookAuthor" TextWrapping="Wrap" FontSize="21.333" Text="" Margin="40,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" FontSize="24" Margin="10,0,0,0" FontWeight="Bold">
+							<Run Text="页数"/>
+							<Run Text="："/>
+                            </TextBlock>
+                            <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="21.333" x:Name="BookPages" Margin="40,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" FontSize="24" Margin="10,0,0,0" FontWeight="Bold">
+							<Run Text="价格"/>
+							<Run Text="："/>
+                            </TextBlock>
+                            <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="21.333" x:Name="BookPrice" Margin="40,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" Text="出版社：" FontSize="24" Margin="10,0,0,0" FontWeight="Bold"/>
+                            <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="21.333" x:Name="BookPub" Margin="40,5,0,0"/>
+                        </StackPanel>
+                        <StackPanel Width="450" Margin="0,10,0,0">
+                            <TextBlock Foreground="Black" FontSize="24" Margin="10,0,0,0" FontWeight="Bold">
+							<Run Text="标准号"/>
+							<Run Text="："/>
+                            </TextBlock>
+                            <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="21.333" x:Name="BookISBN" Margin="40,5,0,0"/>
+                        </StackPanel>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Margin="12,10,12,0">
+                <controls:PivotItem.Header>
+                    <TextBlock Text="摘要" FontSize="48"/>
+                </controls:PivotItem.Header>
+                <Grid Background="#4CFFFFFF">
+                    <ListBox HorizontalAlignment="Center" Width="420" Margin="0,20,0,78">
+                        <TextBlock x:Name="BookSummary" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="Black" FontSize="21.333"/>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Margin="12,10,12,0">
+                <controls:PivotItem.Header>
+                    <TextBlock Text="封面" FontSize="48"/>
+                </controls:PivotItem.Header>
+                <Grid Background="#4CFFFFFF">
+                    <Image x:Name="LarImg" Margin="30,10,30,50"/>
+                    <ProgressBar x:Name="LoadLarImg" Height="10" VerticalAlignment="Center" Margin="20,0" IsIndeterminate="True" Visibility="Collapsed"/>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Margin="12,10,12,0">
+                <controls:PivotItem.Header>
+                    <TextBlock Text="流通情况" FontSize="48"/>
+                </controls:PivotItem.Header>
+                <Grid Background="#4CFFFFFF">
+                    <ListBox x:Name="Circulation" Margin="20,20,20,78">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel toolkit:TiltEffect.IsTiltEnabled="True" toolkit:TiltEffect.SuppressTilt="True" Background="{Binding Color}" Width="416" Margin="0,0,0,5">
+                                    <StackPanel Orientation="Horizontal" Margin="5,5,0,0" VerticalAlignment="Top">
+                                        <StackPanel Orientation="Horizontal" Margin="0,0,15,0">
+                                            <TextBlock Foreground="White" TextWrapping="Wrap" Text="条码："/>
+                                            <TextBlock  Foreground="White" TextWrapping="NoWrap" Text="{Binding Barcode}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                                        <TextBlock  Foreground="White" TextWrapping="Wrap" Text="状态："/>
+                                        <TextBlock  Foreground="White" TextWrapping="NoWrap" Text="{Binding State}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                                        <TextBlock Foreground="White"  TextWrapping="Wrap" Text="所在书库："/>
+                                        <TextBlock  Foreground="White" TextWrapping="NoWrap" Text="{Binding Department}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="5,0,0,5">
+                                        <TextBlock Foreground="White"  TextWrapping="Wrap" Text="{Binding Date}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Margin="12,10,12,0">
+                <controls:PivotItem.Header>
+                    <TextBlock Text="分享" FontSize="48"/>
+                </controls:PivotItem.Header>
+                <ListBox Margin="18,28,18,0" HorizontalAlignment="Center">
+                    <StackPanel x:Name="Weibo" toolkit:TiltEffect.IsTiltEnabled="True" toolkit:TiltEffect.SuppressTilt="True" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Background="#FF007EC6" Margin="10,20,10,0" Height="70" Tap="Weibo_Tap">
+                        <Image Margin="20,10,10,10" Height="50" Source="/weibo.png" Width="50"/>
+                        <TextBlock Text="分享到新浪微博" FontSize="32" VerticalAlignment="Center" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel x:Name="Renren" toolkit:TiltEffect.IsTiltEnabled="True" toolkit:TiltEffect.SuppressTilt="True" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Background="#FF007EC6" Margin="10,10,10,0" Height="70" Tap="Renren_Tap">
+                        <Image Margin="20,10,10,10" Height="50" Source="/renren.png" Width="50"/>
+                        <TextBlock Text="分享到人人网" FontSize="32" VerticalAlignment="Center" Foreground="White" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </ListBox>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,97 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Xupt_lib.About"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="true" shell:SystemTray.Opacity="0" shell:SystemTray.ForegroundColor="Black" Loaded="PhoneApplicationPage_Loaded_1">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition  Mode="BackwardIn"/>
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn"/>
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut"/>
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut"/>
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="white">
+        <Grid Margin="0,20,0,0">
+
+
+        <!--TitlePanel 包含应用程序的名称和页标题-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,0">
+            <TextBlock x:Name="ApplicationTitle" Text="西安邮电大学图书馆-WP客户端" Foreground="Black" Height="34"/>
+            <TextBlock x:Name="PageTitle" Text="关于" Margin="9,0,0,0"  Foreground="Black" FontSize="50" Height="63"/>
+        </StackPanel>
+
+        <!--ContentPanel - 在此处放置其他内容-->
+        <Grid x:Name="ContentPanel" Margin="12,103,12,0">
+            <Image Height="140" HorizontalAlignment="Left" Margin="10,20,0,0" Name="image1" Stretch="Uniform" VerticalAlignment="Top" Width="140" Source="/logo.png" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="171,10,0,0" Name="textBlock1" Text="程序制作：" VerticalAlignment="Top" Foreground="Black" Width="265" TextWrapping="Wrap" />
+            <TextBlock Height="63" HorizontalAlignment="Left" Margin="171,41,0,0" Name="textBlock2" Text="西安邮电大学移动应用开发实验室 Windows Phone 组" VerticalAlignment="Top" Foreground="Black" Width="265" TextWrapping="Wrap" />
+            <TextBlock Height="61" HorizontalAlignment="Left" Margin="171,106,0,0" Name="textBlock3" Text="此程序版权及最终解释权归本组所有" VerticalAlignment="Top" Foreground="Black" Width="244" TextWrapping="Wrap" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,173,0,0" Name="textBlock4" Text="声明：" VerticalAlignment="Top" Foreground="Black" />
+            <TextBlock Height="91" HorizontalAlignment="Left" Margin="12,209,0,0" Name="textBlock5" Text="       本程序仅针对于运行Windows Phone操作系统的智能手机平台设计，对于一切使用于其他平台上所造成的后果，本小组概不负责！" VerticalAlignment="Top" Foreground="Black" Width="438" TextWrapping="Wrap" />
+            <TextBlock Foreground="Black" Height="60" HorizontalAlignment="Left" Margin="9,292,0,0" Name="textBlock6" Text="       对于破解并非法发行本应用的行为，本小组将依法追究其法律责任！" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" />
+            <TextBlock Foreground="Black" Height="60" HorizontalAlignment="Left" Margin="9,349,0,0" Name="textBlock7" Text="       本程序下载安装完全免费，使用过程中产生的数据流量费用由运营商收取，与本小组无关！" TextWrapping="Wrap" VerticalAlignment="Top" Width="438" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,415,0,0" Name="textBlock8" Text="联系我们：" VerticalAlignment="Top" Foreground="Black" />
+                <StackPanel x:Name="weibo" Orientation="Horizontal" Margin="12,435,254,162" Height="40" Tap="weibo_Tap">
+                    <Image Source="/weibo.png" Width="40" Height="40"/>
+                    <TextBlock Margin="10,0,0,0" FontSize="26" Text="官方微博" Foreground="#FF0089B2" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline"/>
+                </StackPanel>
+                <StackPanel x:Name="renren" Orientation="Horizontal" Margin="246,435,20,162" Height="40" Tap="renren_Tap">
+                    <Image Source="/renren.png" Width="40" Height="40"/>
+                    <TextBlock Margin="10,0,0,0" FontSize="26" Text="公共主页" Foreground="#FF0089B2" VerticalAlignment="Center" TextDecorations="Underline"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="12,0,41,135" Height="40" VerticalAlignment="Bottom">
+                    <Image Source="/weixin.png" Width="40" Height="40"/>
+                    <TextBlock Margin="10,0,0,0" FontSize="26" Text="公众平台：西邮3G实验室" Foreground="Black" VerticalAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Height="30" HorizontalAlignment="Left" Margin="10,0,0,92" Name="textBlock9" Text="我们感谢您的使用和支持：" VerticalAlignment="Bottom" Foreground="Black" />
+                <StackPanel x:Name="Mark" Orientation="Horizontal" Margin="12,577,254,9" Tap="Mark_Tap">
+                    <Image Source="/wp.png" Width="60" Margin="0" Height="60"/>
+                    <TextBlock Margin="10,0,0,0" FontSize="26" Text="给个好评" Foreground="Black" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel x:Name="Feedback" Orientation="Horizontal" Margin="225,577,41,9" Tap="Feedback_Tap">
+                    <Image Source="/mail.png" Width="60" Margin="0" Height="60"/>
+                    <TextBlock Margin="10,0,0,0" FontSize="26" Text="反馈意见" Foreground="Black" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+ 
+    <!--演示 ApplicationBar 用法的示例代码-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="按钮 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="按钮 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="菜单项 1"/>
+                <shell:ApplicationBarMenuItem Text="菜单项 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

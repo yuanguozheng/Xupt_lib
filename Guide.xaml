@@ -1,0 +1,66 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Xupt_lib.Guide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="false" Loaded="PhoneApplicationPage_Loaded_1">
+
+    <!--LayoutRoot 是包含所有页面内容的根网格-->
+    <Grid x:Name="LayoutRoot" Background="#FF0077E6">
+        <!--枢轴控件-->
+        <controls:Pivot>
+            <!--枢轴项一-->
+            <controls:PivotItem Height="800" Margin="0,-10,0,0">
+                <Grid>
+                	<Grid.Background>
+                		<ImageBrush Stretch="Fill" ImageSource="/Guide/p1.png"/>
+                	</Grid.Background>
+                </Grid>
+            </controls:PivotItem>
+
+            <!--枢轴项二-->
+            <controls:PivotItem Height="800" Margin="0,-10,0,0">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Guide/p2.png"/>
+                    </Grid.Background>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Height="800" Margin="0,-10,0,0">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Guide/p3.png"/>
+                    </Grid.Background>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Height="800" Margin="0,-10,0,0">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Guide/p4.png"/>
+                    </Grid.Background>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Height="800" Margin="0,-10,0,0">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="/Guide/p5.png"/>
+                    </Grid.Background>
+                    <Button x:Name="Finish" Content="立即使用" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,85" Width="320" Click="Finish_Click_1"/>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>
